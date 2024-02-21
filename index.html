@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KripsyMatt Celebrity Membership Card Generator</title>
+    <title>KrispyMatt Celebrity Membership Card Generator</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@200;300;400;500;700&display=swap">
     <style>
         body {
@@ -44,11 +44,12 @@
             position: relative;
             background-color: #000;
             color: #FFD700;
-            padding: 20px;
+            padding: 20px 50px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
             margin-bottom: 20px;
-            width: 400px;
+            width: 90%; /* Adjust as needed */
+            max-width: 400px; /* Set a maximum width */
             text-align: center;
         }
 
@@ -70,8 +71,6 @@
             object-fit: cover;
             margin-bottom: 5px;
         }
-
-        
 
         #activate-btn {
             background-color: #FFD700;
@@ -98,7 +97,8 @@
             background: #fff;
             padding: 30px;
             border-radius: 10px;
-            width: 300px;
+            width: 90%; /* Adjust as needed */
+            max-width: 300px; /* Set a maximum width */
             text-align: center;
         }
 
@@ -113,6 +113,7 @@
             color: #000;
             margin-bottom: 20px;
         }
+
         #vip-badge {
             position: absolute;
             font-weight: 700;
@@ -122,6 +123,28 @@
             color: #000;
             padding: 5px 10px;
             border-radius: 5px;
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .card {
+                padding: 15px 30px;
+                width: 80%; /* Adjust as needed */
+            }
+
+            #modal {
+                width: 80%; /* Adjust as needed */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: 95%; /* Adjust as needed */
+            }
+
+            #modal {
+                width: 95%; /* Adjust as needed */
+            }
         }
     </style>
 </head>
@@ -153,7 +176,7 @@
             <p id="amount">$100</p>
             <p class="modal-details">
                 You will be required to pay this amount to activate your VIP membership.
-                Please contact the KrispyMatt for payment details.
+                Please contact KrispyMatt for payment details.
             </p>
             <span id="close-modal" onclick="closeModal()">Close</span>
         </div>
